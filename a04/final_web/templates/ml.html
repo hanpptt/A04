@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Result</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="../static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+	<!-- Custom fonts for this template -->
+	<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+		rel="stylesheet">
+	<link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../static/vendor/devicons/css/devicons.min.css" rel="stylesheet">
+	<link href="../static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="../static/css/resume.css" rel="stylesheet">
+
+	<style>
+		.bg-primary {
+			background-color: #0054af !important;
+		}
+
+		/* 		.section{
+		    background-image: url(img/plane.png) no-repeat;!important;
+		} */
+		.btn-light {
+			color: #fff;
+			background-color: #cacaca;
+			border-color: #cacaca;
+		}
+
+		.secbg {
+			background-image: url(img/bgimage.png);
+			background-size: 80%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.secbg2 {
+			background-image: url(img/cloud.png);
+			background-size: 90%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.kuangkuang {
+			border: rgba(0, 120, 255, 0.8) dashed 0.125rem;
+			border-radius: 15px;
+			padding: 150px 0px;
+			-webkit-transition: all 0.4s ease-out;
+			transition: all 0.4s ease-out;
+		}
+
+		.kuangkuang:hover {
+			border: rgba(255, 99, 71, 1) dashed 0.125rem;
+			border-radius: 15px;
+			padding: 150px 0px;
+			box-shadow: 0px 10px 25px 0px #e0e0e0;
+			-webkit-transition: all 0.4s ease-out;
+			transition: all 0.4s ease-out;
+		}
+
+		.btnaaa {
+			color: white;
+			text-decoration: none;
+		}
+
+		.btnaaa:hover {
+			color: white;
+			text-decoration: none;
+		}
+	</style>
+
+</head>
+
+<body class="container">
+	<form action="/download" class="">
+		<button class="btn btn-primary col-2 m-auto">
+			download
+		</button>
+	</form>
+	<form action="/">
+		<button class="btn btn-primary col-2 m-auto">back</button>
+	</form>
+	<div class="table-responsive">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>Pax_passport</th>
+					<th>选座意愿可能性</th>
+					<th>是否愿意选座</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for i in data%}
+				<tr class="table-secondary">
+					<td>{{ i[0] }}</td>
+					<td>{{ i[2] }}</td>
+					{% if i[1]==1 %}
+					<td>有意愿</td>
+					{% else %}
+					<td>无意愿</td>
+					{% endif %}
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+
+
+
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="../static/vendor/jquery/jquery.min.js"></script>
+	<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Custom scripts for this template -->
+	<script src="../static/js/resume.min.js"></script>
+
+	<style>
+
+
+	</style>
+
+</body>
+
+</html>

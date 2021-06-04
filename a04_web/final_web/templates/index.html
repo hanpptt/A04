@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	{{ dropzone.load_css() }}
+	{{ dropzone.style('border: none;background-color:rgba(0,0,0,0)') }}
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Result</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="../static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+	<!-- Custom fonts for this template -->
+	<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+		rel="stylesheet">
+	<link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../static/vendor/devicons/css/devicons.min.css" rel="stylesheet">
+	<link href="../static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="../static/css/resume.css" rel="stylesheet">
+
+	<style>
+		.btn-primary {
+			color: #fff;
+			background-color: #0054af;
+			border-color: #0054af;
+		}
+
+		.btn-primary:hover {
+			color: #fff;
+			background-color: #0069d9;
+			border-color: #0062cc;
+		}
+
+		.mycard {
+			float: left;
+			margin: 15px 0px;
+			-webkit-transition: margin 0.4s ease-out;
+			/* 兼容谷歌 */
+			-moz-transition: margin 0.4s ease-out;
+			/* 兼容火狐 */
+			-o-transition: margin 0.4s ease-out;
+			/* 兼容Opera浏览器 */
+		}
+
+		.mycard:hover {
+			margin-top: 2px;
+
+			-webkit-box-shadow: 0px 10px 25px 0px #e0e0e0;
+			/*box-shadow: X轴偏移量   Y轴偏移量   阴影模糊半径   阴影扩展半径   阴影颜色   投影方式 */
+			box-shadow: 0px 10px 25px 0px #e0e0e0;
+			-webkit-transition: all 0.4s ease-out;
+			transition: all 0.4s ease-out;
+		}
+
+		.modal-lg {
+			max-width: 1200px;
+		}
+
+		.my-font {
+			font-weight: 500;
+			font-size: 25px;
+			line-height: 2;
+		}
+
+		.bg-primary {
+			background-color: #0054af !important;
+		}
+
+		/* 		.section{
+		    background-image: url(img/plane.png) no-repeat;!important;
+		} */
+		.btn-light {
+			color: #fff;
+			background-color: #cacaca;
+			border-color: #cacaca;
+		}
+
+		.secbg {
+			background-image: url(../static/img/bgimage.png);
+			background-size: 90%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.secbg2 {
+			background-image: url(../static/img/cloud.png);
+			background-size: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.kuangkuang {
+			border: rgba(0, 120, 255, 0.8) dashed 0.125rem;
+			border-radius: 15px;
+			-webkit-transition: all 0.4s ease-out;
+			transition: all 0.4s ease-out;
+		}
+
+		.kuangkuang:hover {
+			border: rgba(255, 99, 71, 1) dashed 0.125rem;
+			border-radius: 15px;
+			box-shadow: 0px 10px 25px 0px #e0e0e0;
+			-webkit-transition: all 0.4s ease-out;
+			transition: all 0.4s ease-out;
+		}
+
+		.btnaaa {
+			color: white;
+			text-decoration: none;
+		}
+
+		.btnaaa:hover {
+			color: white;
+			text-decoration: none;
+		}
+
+		.headpng {
+			margin: 50px 0 25px;
+		}
+
+		.nav-link.active {
+			color: #fff;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	</style>
+
+</head>
+
+<body id="page-top">
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+		<a class="navbar-brand headpng js-scroll-trigger" href="#page-top">
+			<!-- <span class="d-block d-lg-none">Start Bootstrap</span> -->
+			<span class="d-none d-lg-block">
+				<img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../static/img/study.png" alt="">
+			</span>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#about">项目首页</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#experience">实现步骤</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#education">成果展示</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#skills">进度安排</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#interests">成员介绍</a>
+				</li>
+
+			</ul>
+		</div>
+	</nav>
+
+
+
+
+	<div class="container-fluid p-0">
+
+		<section class="resume-section p-3 p-lg-5 d-flex d-column secbg" id="about">
+			<div class="my-0 mx-auto" style="padding-top: 18%;">
+				<h1 class="mb-0">航空旅客付费选座意愿识别系统
+					<!-- <span class="text-primary">Taylor</span> -->
+				</h1>
+			</div>
+		</section>
+
+
+		<section class="resume-section p-3 p-lg-5 d-flex flex-column my-font secbg2" id="experience">
+
+			<div class="col-lg-12 mx-auto">
+				<div>
+					<h2 class="text-center mx-auto">实现步骤</h2>
+				</div>
+
+				<div class="container">
+
+					<div class="card-body">
+						<p class="text-justify text-wrap" style="text-indent: 2em;">
+							本项目通过数据预处理、指标降维、模型训练三个主要操作对航空旅客付费选座意愿进行识别。
+						</p>
+					</div>
+
+					<div class="text-center">
+						<img class="img-fluid w-75 mx-auto mb-2" src="../static/img/proc1.png" alt="">
+					</div>
+
+					<div id="accordion">
+
+						<div class="card">
+							<div class="card-header">
+								<h5 class="mb-0">
+									<button class="btn btn-link " data-toggle="collapse"
+										data-target="#collapseTwo"><big>数据预处理</big></button>
+								</h5>
+							</div>
+							<div class="collapse" id="collapseTwo" data-parent="#accordion">
+								<div class="card-body">
+									<p class="text-justify text-wrap">①3σ原则修改异常值：对于异常值的处理采用超过上界则取上界值，低于下界则取下界的原则。</p>
+									<p class="text-justify text-wrap">
+										②指标的分类与合并：将提供数据按照数据项说明中的描述分为题目未给数据、独立数据、与时间有关的数值型数据、与时间有关的字符串型数据。针对不同的分类，进行不同的合并处理。
+									</p>
+									<p class="text-justify text-wrap">③指标的提取：除了原有指标外，我们提取出了另一个重要的指标。</p>
+									<p class="text-justify text-wrap">④指标的删除：对于全部空缺、全部相同或者与训练无关的数据进行删除处理。</p>
+									<p class="text-justify text-wrap">
+										⑤指标的标准化：数值型数据进行标准化和归一化处理，字符串型数据按照付费选座意愿出现的频次转化为数值型数据。</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-header">
+								<h5 class="mb-0">
+									<button class="btn btn-link" data-toggle="collapse"
+										data-target="#collapseThree"><big>指标降维</big></button>
+								</h5>
+							</div>
+							<div class="collapse" id="collapseThree" data-parent="#accordion">
+								<div class="card-body">
+									<p class="text-justify text-wrap">
+										①平衡类分布处理：由于训练集中标签列（emd_lab2）的数据分布不均（有付费意愿和没有付费意愿的数量分布不均），采用朴素随机上采样的改进方法进行处理。</p>
+									<p class="text-justify text-wrap">②LASSO回归降维处理：处理完成的数据，通过最小二乘法和正则化系数的引入，实现降维。</p>
+									<p class="text-justify text-wrap">
+										③相关性分析降维处理：通过比较两两指标之间的相关性，将与标签列（emd_lab2）相关性大的指标进行保留，删除与标签列（emd_lab2）相关性小的指标。
+									</p>
+									<p class="text-justify text-wrap">
+										④随机森林重要性排序处理：通过随机森林重要性的判断，将重要性从高到低排序，最终结果为下面的模型训练阶段服务。</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-header">
+								<h5 class="mb-0">
+									<button class="btn btn-link" data-toggle="collapse"
+										data-target="#collapseFour"><big>模型训练</big></button>
+								</h5>
+							</div>
+							<div class="collapse" id="collapseFour" data-parent="#accordion">
+								<div class="card-body">
+									<p class="text-justify text-wrap">
+										①最终指标个数的选取：通过将不同数量的指标放入随机森林模型进行训练，绘制模型训练准确率图形，最终发现，当选择6个指标时，准确率较高且指标数量最少，此时准确率在98%以上，召回率、F1值均达到要求。
+									</p>
+									<p class="text-justify text-wrap">
+										②预测结果输出：将付费意愿最高的300个旅客统一编码输出，并按照付费选座意愿从高到低排序，将结果保存至Excel表格。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+
+
+		</section>
+
+		<section class="resume-section p-3 p-lg-5 d-flex flex-column secbg2" id="education">
+			<div class="my-auto">
+				<h2 class="mb-5 text-center">上传测试文件</h2>
+
+
+
+				<div class="col-10 mx-auto kuangkuang">
+					{{ dropzone.create(action='/upload') }}
+				</div>
+
+				<br />
+				<form action="/ml" class="m-auto text-center">
+					<button class="btn btn-primary col-2 m-auto ">提&nbsp;&nbsp;&nbsp;交</button>
+				</form>
+
+
+			</div>
+		</section>
+
+		<section class="resume-section p-3 p-lg-5 d-flex flex-column secbg2" id="skills">
+			<div class="my-auto">
+				<h2 class="mb-5 text-center">项目任务安排</h2>
+
+
+
+				<div class="row text-center mx-auto" style="margin: 20px;">
+
+
+					<div class="col-lg-6 col-md-6 mb-4">
+						<div class="card h-100 mycard">
+							<img src="../static/img/project.png" alt="" class="card-img-top">
+							<div class="card-body">
+								<h4 class="card-title">项目进度甘特图</h4>
+							</div>
+							<div class="card-footer">
+								<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">了解详情</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-6 mb-4">
+						<div class="card h-100 mycard">
+							<img src="../static/img/ganta.png" alt="" class="card-img-top">
+							<div class="card-body">
+								<h4 class="card-title">项目进度安排表</h4>
+							</div>
+							<div class="card-footer">
+								<button class="btn btn-primary" data-toggle="modal"
+									data-target="#myModal_2">了解详情</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="modal fade w-100 text-center " tabindex="-1" id="myModal" data-backdrop="static"
+					data-keyboard="false">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header m-auto">
+								<h2 class="modal-title">项目进度甘特图</h2>
+
+							</div>
+							<div class="modal-body">
+								<div class="container-fluid">
+
+									<img src="../static/img/project.png" alt="" class="w-100">
+
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-primary" data-dismiss="modal">返回</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade w-100 text-center " tabindex="-1" id="myModal_2" data-backdrop="static"
+					data-keyboard="false">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header m-auto">
+								<h2 class="modal-title">项目进度安排表</h2>
+
+							</div>
+							<div class="modal-body">
+								<div class="container-fluid">
+
+									<table class="table table-bordered table-hover">
+										<thead>
+											<tr class="table-primary">
+												<th>步骤阶段</th>
+												<th>开始时间</th>
+												<th>持续天数</th>
+												<th>预计完成时间</th>
+												<th>实际完成时间</th>
+												<th>评价</th>
+												<th>负责人</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="table-active">
+												<td>与企业沟通了解需求</td>
+												<td>2020-12-15</td>
+												<td>8</td>
+												<td>2020-12-23</td>
+												<td>2020-12-23</td>
+												<td>按时完成</td>
+												<td>Yoyo</td>
+											</tr>
+											<tr class="table-secondary">
+												<td>指标的分析</td>
+												<td>2020-12-23</td>
+												<td>6</td>
+												<td>2020-12-29</td>
+												<td>2020-12-29</td>
+												<td>按时完成</td>
+												<td>阿Keny</td>
+											</tr>
+											<tr class="table-active">
+												<td>指标的分类</td>
+												<td>2020-12-29</td>
+												<td>5</td>
+												<td>2021-01-03</td>
+												<td>2021-01-03</td>
+												<td>按时完成</td>
+												<td>Peter</td>
+											</tr>
+											<tr class="table-secondary">
+												<td>指标分类方法文献查询</td>
+												<td>2021-01-03</td>
+												<td>2</td>
+												<td>2021-01-08</td>
+												<td>2021-01-08</td>
+												<td>按时完成</td>
+												<td>阿Keny</td>
+											</tr>
+											<tr class="table-active">
+												<td>指标的合并</td>
+												<td>2021-01-08</td>
+												<td>4</td>
+												<td>2021-01-10</td>
+												<td>2021-01-10</td>
+												<td>按时完成</td>
+												<td>Yoyo</td>
+											</tr>
+											<tr class="table-secondary">
+												<td>指标的分解与删除</td>
+												<td>2021-01-10</td>
+												<td>2</td>
+												<td>2021-01-14</td>
+												<td>2021-01-14</td>
+												<td>按时完成</td>
+												<td>Lely</td>
+											</tr>
+											<tr class="table-active">
+												<td>指标的标准化</td>
+												<td>2021-01-14</td>
+												<td>8</td>
+												<td>2021-01-22</td>
+												<td>2021-01-22</td>
+												<td>按时完成</td>
+												<td>阿Xun</td>
+											</tr>
+											<tr class="table-secondary">
+												<td>类别分布平衡处理</td>
+												<td>2021-01-22</td>
+												<td>8</td>
+												<td>2021-01-30</td>
+												<td>2021-01-30</td>
+												<td>按时完成</td>
+												<td>Peter</td>
+											</tr>
+											<tr class="table-active">
+												<td>指标的降维</td>
+												<td>2021-01-30</td>
+												<td>7</td>
+												<td>2021-02-06</td>
+												<td>2021-02-06</td>
+												<td>按时完成</td>
+												<td>Yoyo</td>
+											</tr>
+											<tr class="table-secondary">
+												<td>模型构建</td>
+												<td>2021-02-06</td>
+												<td>5</td>
+												<td>2021-02-11</td>
+												<td>2021-02-11</td>
+												<td>按时完成</td>
+												<td>阿Xun</td>
+											</tr>
+											<tr class="table-active">
+												<td>训练模型并保存</td>
+												<td>2021-02-11</td>
+												<td>7</td>
+												<td>2021-02-18</td>
+												<td>2021-02-18</td>
+												<td>按时完成</td>
+												<td>阿Keny</td>
+											</tr>
+											<tr class="table-secondary">
+												<td>测试集训练并保存结果</td>
+												<td>2021-02-18</td>
+												<td>11</td>
+												<td>2021-03-01</td>
+												<td>2021-03-01</td>
+												<td>按时完成</td>
+												<td>Peter</td>
+											</tr>
+											<tr class="table-secondary">
+												<td>制作网页端相关接口</td>
+												<td>2021-03-01</td>
+												<td>12</td>
+												<td>2021-03-13</td>
+												<td>2021-03-13</td>
+												<td>按时完成</td>
+												<td>Lely</td>
+											</tr>
+											<tr class="table-secondary">
+												<td>完成网页系统开发并调试</td>
+												<td>2021-03-13</td>
+												<td>13</td>
+												<td>2021-03-26</td>
+												<td>2021-03-26</td>
+												<td>按时完成</td>
+												<td>Yoyo</td>
+											</tr>
+											<tr class="table-secondary">
+												<td>意愿识别测试并完善</td>
+												<td>2021-03-26</td>
+												<td>12</td>
+												<td>2021-04-07</td>
+												<td>2021-04-07</td>
+												<td>按时完成</td>
+												<td>Lely</td>
+											</tr>
+											<tr class="table-secondary">
+												<td>最终结束时间</td>
+												<td>2021-4-12</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+
+
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-primary" data-dismiss="modal">返回</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+			</div>
+		</section>
+
+		<section class="resume-section p-3 p-lg-5 d-flex flex-column my-font secbg2" id="interests">
+			<div class="my-auto">
+				<h2 class="mb-5 text-center">成员介绍</h2>
+
+
+				<div class="carousel slide w-100 mx-auto" id="myCarousel_1" data-ride="carousel" data-interval="10000">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel_1" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel_1" data-slide-to="1"></li>
+						<li data-target="#myCarousel_1" data-slide-to="2"></li>
+						<li data-target="#myCarousel_1" data-slide-to="3"></li>
+						<li data-target="#myCarousel_1" data-slide-to="4"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="d-block w-25 float-left my-auto">
+
+								<img src="../static/img/Yoyo1.png" alt="" class="d-block w-100">
+								<h3 class="text-center text-justify text-wrap">项目总监Yoyo</h3>
+							</div>
+
+							<!-- <img src="img/Yoyo.png" alt="" class="d-block w-50 float-right"> -->
+							<div class="d-block w-75 float-right my-auto">
+								<p class="text-justify text-wrap" style="text-indent: 2em;">
+									曾多次获得国际大学生数学建模竞赛美赛二等奖、全国大学生数学建模竞赛全国二等奖、浙江省新苗人才项目成员，在多个项目中担任过项目总监，有着良好的组织协调和管理能力。</p>
+								<p class="text-justify text-wrap" style="text-indent: 2em;">
+									项目主负责人，制作研发的流程，分配好各个队员之间的工作，做好项目需求分析和配合各个队员的工作，指定技术标准与规范。主要负责项目进度的安排和质量监控，成本的控制，风险的管理，项目的最终评估，确保目标的最终实现。
+								</p>
+							</div>
+
+							<div class="carousel-caption d-none d-sm-block">
+								<h5>项目总监Yoyo</h5>
+								<p>项目总监Yoyo</p>
+							</div>
+						</div>
+
+						<div class="carousel-item ">
+							<div class="d-block w-25 float-left my-auto">
+
+								<img src="../static/img/Peter1.png" alt="" class="d-block w-100">
+								<h3 class="text-center text-justify text-wrap">开发工程师Peter</h3>
+							</div>
+
+							<div class="d-block w-75 float-right my-auto">
+								<p class="text-justify text-wrap" style="text-indent: 2em;">
+									曾参加过全国大学生服务外包创新创业竞赛，有着丰富的比赛经验，拥有多个项目开发发和测试的经验。</p>
+								<p class="text-justify text-wrap" style="text-indent: 2em;">
+									主要负责软件测试方案和测试文档方面，制定软件在各个测试阶段的工作计划，验证模型的准确性并解决测试过程中出现的问题。</p>
+							</div>
+							<div class="carousel-caption d-none d-sm-block">
+								<h5>开发工程师Peter</h5>
+								<p>开发工程师Peter</p>
+							</div>
+						</div>
+
+						<div class="carousel-item ">
+							<div class="d-block w-25 float-left my-auto">
+
+								<img src="../static/img/AXun1.png" alt="" class="d-block w-100">
+								<h3 class="text-center text-justify text-wrap">财务经理阿Xun</h3>
+							</div>
+							<div class="d-block w-75 float-right my-auto">
+								<p class="text-justify text-wrap" style="text-indent: 2em;">
+									曾参加大学生创新创业竞赛，大学生电子商务竞赛，善于评估项目风险，预测成本，具有良好的谈判能力和成本意识，能独立进行成本分析。</p>
+								<p class="text-justify text-wrap" style="text-indent: 2em;">
+									主要负责项目成本核算与成本管理体系、流程、标准的制定及制度的修订完善，收集项目成本数据，维护、改进成本管理程序和政策，以达到风险控制的要求，完成成本分析报告。</p>
+							</div>
+							<div class="carousel-caption d-none d-sm-block">
+								<h5>财务经理阿Xun</h5>
+								<p>财务经理阿Xun</p>
+							</div>
+						</div>
+
+						<div class="carousel-item ">
+							<div class="d-block w-25 float-left my-auto">
+
+								<img src="../static/img/Lely1.png" alt="" class="d-block w-100">
+								<h3 class="text-center text-justify text-wrap">技术经理Lely</h3>
+							</div>
+
+							<div class="d-block w-75 float-right my-auto">
+								<p class="text-justify text-wrap" style="text-indent: 2em;">
+									曾多次获得省级数学建模竞赛奖项，有着对算法的浓厚的兴趣。初次之外还拥有软件开发的经验。精通python语言，熟练掌握Matlab。</p>
+								<p class="text-justify text-wrap" style="text-indent: 2em;">
+									指定技术标准和规范；负责项目架构的设计、技术方案及核心技术的设定、技术问题的处理、系统的开发、开发任务的分配、整体算法的实现和技术可行性的评估。</p>
+							</div>
+							<div class="carousel-caption d-none d-sm-block">
+								<h5>技术经理Lely</h5>
+								<p>技术经理Lely</p>
+							</div>
+						</div>
+
+						<div class="carousel-item ">
+							<div class="d-block w-25 float-left my-auto">
+
+								<img src="../static/img/AKeny1.png" alt="" class="d-block w-100">
+								<h3 class="text-center text-justify text-wrap">市场部经理阿Keny</h3>
+							</div>
+
+							<div class="d-block w-75 float-right my-auto">
+								<p class="text-justify text-wrap" style="text-indent: 2em;">
+									曾获得国际大学生数学建模竞赛美赛三等奖，互联网+创新创业大赛院级一等奖，能够对需求有很好的认知，并且具有良好的沟通能力。</p>
+								<p class="text-justify text-wrap" style="text-indent: 2em;">
+									主要负责市场方面的调研工作，与客户及时沟通，收集反馈信息，并将客户的需求分析整合，进一步反馈给项目经理；最终制定商业方案和商业决策，是团队协作中重要的沟通桥梁。</p>
+							</div>
+							<div class="carousel-caption d-none d-sm-block">
+								<h5>市场部经理阿Keny</h5>
+								<p>市场部经理阿Keny</p>
+							</div>
+						</div>
+
+					</div>
+
+					<a class="carousel-control-prev" href="#myCarousel_1" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a class="carousel-control-next" href="#myCarousel_1" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+
+
+			</div>
+		</section>
+
+
+
+	</div>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="../static/vendor/jquery/jquery.min.js"></script>
+	<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Custom scripts for this template -->
+	<script src="../static/js/resume.min.js"></script>
+
+	<style>
+
+
+	</style>
+	{{ dropzone.load_js() }}
+</body>
+
+</html>

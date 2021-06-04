@@ -1,0 +1,6 @@
+library(FactoMineR)
+install.packages("FactoMineR")
+data<-read.csv("Documents/a04/data_corr.csv")
+res.pca <- PCA(data, graph = FALSE)
+eig.val <- get_eigenvalue(res.pca)
+fviz_eig(res.pca, addlabels = TRUE, ylim = c(0, 50))
